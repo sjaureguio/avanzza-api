@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('files', function (Blueprint $table) {
+        Schema::create('counters', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
-            $table->boolean('status')->default(true);
+            $table->dateTime('date');
+            $table->smallInteger('count')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('counters');
     }
 };
