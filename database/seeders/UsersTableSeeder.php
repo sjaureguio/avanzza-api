@@ -21,6 +21,6 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('123456'),
         ]);
 
-        $user->createToken('access_token');
+        // $user->createToken('access_token');
     }
 }
